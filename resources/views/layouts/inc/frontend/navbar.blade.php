@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
-                    <h5 class="brand-name">Funda Ecom</h5>
+                    <h5 class="brand-name">RS25</h5>
                 </div>
                 <div class="col-md-5 my-auto">
                     <form role="search">
@@ -27,6 +27,16 @@
                             <a class="nav-link" href="#">
                                 <i class="fa fa-heart"></i> Wishlist (0)
                             </a>
+                            <a class="dropdown-item" href=""
+                                            onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                            <i class="fa fa-sign-out"></i>
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
                         </li>
 
                         <!-- Authentication Links -->
@@ -55,7 +65,7 @@
                                     <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a></li>
                                     <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        <a class="dropdown-item" href=""
                                             onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                                             <i class="fa fa-sign-out"></i>

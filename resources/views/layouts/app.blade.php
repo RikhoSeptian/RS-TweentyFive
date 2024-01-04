@@ -22,14 +22,36 @@
     <link href="{{ asset('assets/CSS/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/CSS/custom.css') }}" rel="stylesheet">
     
+    <!-- vite -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <!-- Livewire CSS -->
     @livewireStyles
 
 </head>
 <body>
-    <div id="app">
+    <div >
 
         @include('layouts.inc.frontend.navbar')
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">{{ __('Dashboard') }}</div>
+
+                        <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+                            <div id="app"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <main class="py-4">
             @yield('content')

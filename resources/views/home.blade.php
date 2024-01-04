@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in! ini hapus') }}
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>

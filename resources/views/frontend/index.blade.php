@@ -4,7 +4,6 @@
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
 
         <div class="carousel-inner">
-
             @foreach ($sliders as $key => $sliderItem)
             <div class="carousel-item {{ $key == 0 ? 'active':'' }}">
                 @if ($sliderItem->image)

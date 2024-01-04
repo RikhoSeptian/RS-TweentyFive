@@ -1,0 +1,64 @@
+________________===== Composer Install Package =====________________
+// install laravel10
+composer create-project laravel/laravel Laravel10
+
+// install laravel/ui 
+composer require laravel/ui
+
+// install laravel/breeze
+composer require laravel/breeze
+
+________________===== Menerapkan package ke Laravel =====_____________
+
+// laravel install ui
+- php artisan ui bootstrap
+- php artisan ui bootstrap --auth
+
+// install ui vue
+php artisan ui vue
+
+_________________===== php artisan =====__________________
+// Code php artisan 
+php artisan serve           | Menjalankan laraveable
+php artisan migrate    | Menyimpan data tabel
+
+// Code php artisan 
+php artisan make:controller ContohController    | Membuat file controller dengan nama ContohController
+php artisan make:migration create_contoh_table  | Membuat tabel mysql dengan nama contoh
+php artisan make:model ContohModel              | Membuat file model dengan nama ContohModel
+
+// Code php gabungan
+php artisan make:model Product --mcr
+
+
+________________===== npm instal =====_____________
+// install npm dan cara run
+- npm install   | Untuk menginstall npm
+- npm run dev   | Menjalankan npm
+
+// install vue-router vue-axios
+npm install vue-router vue-axios
+
+// instal full vue
+npm install vue@next vue-router@
+
+// install vue dengan versi terbaru dan vue-loader terbaru
+npm install vue@next vue-loader@next axios --save
+
+// install vue versi terbaru vue-router versi terbaru vue-loader versi terbaru
+npm install vue-loader@next vue@next vue-router@next
+
+// install vite
+npm install --save-dev @vitejs/plugin-vue
+
+
+
+
+
+________________===== Akun Login =====_____________
+
+Email : admin@gmail.com
+Passw : 12345678
+
+email : rs.tweentyfive25@gmail.com
+passw : 12345678
