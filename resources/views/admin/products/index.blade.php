@@ -37,6 +37,7 @@
                                         @else
                                             No Category
                                         @endif
+                                    </td>
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->selling_price }}</td>
                                     <td>{{ $product->quantity }}</td>
@@ -53,9 +54,9 @@
                             @endforelse
                     </tbody>
                 </table>
-                {{-- <div>
-                    {{ $categories->links() }}
-                </div> --}}
+                <div>
+                    {{ $products->links() }}
+                </div>
             </div>
         </div>
     </div>

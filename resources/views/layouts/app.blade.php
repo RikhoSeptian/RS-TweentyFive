@@ -34,7 +34,10 @@
 
         @include('layouts.inc.frontend.navbar')
 
-        <div class="container">
+        <main class="py-2">
+            @yield('content')
+
+        <div class="container py-2">
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card">
@@ -52,10 +55,8 @@
                 </div>
             </div>
         </div>
+    </main>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
     <!-- Script -->
     <script src="{{ asset('assets/JS/bootstrap.bundle.min.js') }}"></script>

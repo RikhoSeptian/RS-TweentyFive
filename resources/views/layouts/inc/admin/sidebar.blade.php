@@ -21,7 +21,7 @@
         </a>
         <div class="collapse" id="category">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{ url('admin/category/create')}}">Add Category</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url('admin/category')}}">Add Category</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ url('admin/category') }}">View Category</a></li>
           </ul>
         </div>
@@ -34,7 +34,7 @@
         </a>
         <div class="collapse" id="products">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{ url('admin/products/create')}}">Add Product</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url('admin/products')}}">Add Product</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ url('admin/products') }}">View Products</a></li>
           </ul>
         </div>
@@ -59,8 +59,8 @@
         </a>
         <div class="collapse" id="users">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="#"> Add User </a></li>
-            <li class="nav-item"> <a class="nav-link" href="#"> View Users </a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url('admin/users') }}"> Add User </a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url('admin/users') }}"> View Users </a></li>
           </ul>
         </div>
       </li>

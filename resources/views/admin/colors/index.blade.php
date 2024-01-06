@@ -44,9 +44,9 @@
                             @endforelse
                     </tbody>
                 </table>
-                {{-- <div>
-                    {{ $categories->links() }}
-                </div> --}}
+                <div>
+                    {{ $colors->links() }}
+                </div>
             </div>
         </div>
     </div>

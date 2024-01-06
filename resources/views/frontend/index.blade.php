@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div id="carouselExampleCaptions" class="container-fluid carousel slide" data-bs-ride="false">
 
         <div class="carousel-inner">
             @foreach ($sliders as $key => $sliderItem)

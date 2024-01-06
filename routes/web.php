@@ -76,4 +76,13 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('colors/{color}/delete', 'destroy');
     });
 
+    Route::controller(App\Http\Controllers\Admin\UserController::class)->group(function (){
+        Route::get('users', 'index');
+        Route::get('users/create', 'create');
+        Route::post('users/create', 'store');
+        Route::get('users/{user_id}/edit', 'edit');
+        Route::put('users/{user_id}', 'update');
+        Route::get('users/{user_id}/delete', 'destroy');
+    });
+
 });
