@@ -4,14 +4,14 @@
 
     <div class="row">
         <div class="col-md-12">
-            {{-- @if (session('message'))
+            @if (session('message'))
                 <div class="alert alert-success">{{ session('message') }}</div>
-            @endif --}}
+            @endif
             <div class="card">
                 <div class="card-header">
                     <h4>
                         Brands List
-                        <a href="$" data-bs-toggle="modal" data-bs-target="#addBrandModal" class="btn btn-primary btn-sm float-end">Add Brands</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrandModal" class="btn btn-primary btn-sm float-end">Add Brands</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -59,12 +59,12 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 
 
 @push('script')
-    
+
 <script>
     window.addEventListener('close-modal', event => {
         $('#addBrandModal').modal('hide');

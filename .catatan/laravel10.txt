@@ -2,7 +2,7 @@ ________________===== Composer Install Package =====________________
 // install laravel10
 composer create-project laravel/laravel Laravel10
 
-// install laravel/ui 
+// install laravel/ui
 composer require laravel/ui
 
 // install laravel/breeze
@@ -18,14 +18,15 @@ ________________===== Menerapkan package ke Laravel =====_____________
 php artisan ui vue
 
 _________________===== php artisan =====__________________
-// Code php artisan 
-php artisan serve           | Menjalankan laraveable
-php artisan migrate    | Menyimpan data tabel
 
-// Code php artisan 
+// Code php artisan
 php artisan make:controller ContohController    | Membuat file controller dengan nama ContohController
 php artisan make:migration create_contoh_table  | Membuat tabel mysql dengan nama contoh
 php artisan make:model ContohModel              | Membuat file model dengan nama ContohModel
+php artisan make:livewire nama_file             | Membuat file livewire dengan nama nama_file
+
+// Code php artisan
+php artisan migrate    | Menyimpan data tabel
 
 // Code php gabungan
 php artisan make:model Product --mcr
@@ -52,13 +53,28 @@ npm install vue-loader@next vue@next vue-router@next
 npm install --save-dev @vitejs/plugin-vue
 
 
+________________===== Menjalankan Serve Laravel =====_____________
 
+php artisan serve               | Menjalankan laraveable
+php artisan serve --port=8080   | Menjalankan laravel dengan port lain
+
+// duplikat .env.example menjadi .env
+cp .env.example .env
 
 
 ________________===== Akun Login =====_____________
+
+Email : mghy25rikho@gmail.com
+Passw : admin123
 
 Email : admin@gmail.com
 Passw : 12345678
 
 email : rs.tweentyfive25@gmail.com
-passw : 12345678
+passw : user1234
+
+
+
+________________===== Tugas =====_____________
+
+Lanjutkan part 40

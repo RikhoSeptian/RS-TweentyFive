@@ -8,9 +8,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('admin/orders') }}">
           <i class="mdi mdi-sale menu-icon"></i>
-          <span class="menu-title">Sales</span>
+          <span class="menu-title">Orders</span>
         </a>
       </li>
       <li class="nav-item">
@@ -71,23 +71,10 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="documentation/documentation.html">
+        <a class="nav-link" href="{{ url('admin/settings')}}">
           <i class="mdi mdi-file-document-box-outline menu-icon"></i>
           <span class="menu-title">Site Setting</span>
         </a>
       </li>
-      {{-- <li class="nav-item">
-        <a class="nav-link" href="pages/tables/basic-table.html">
-          <i class="mdi mdi-grid-large menu-icon"></i>
-          <span class="menu-title">Tables</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/icons/mdi.html">
-          <i class="mdi mdi-emoticon menu-icon"></i>
-          <span class="menu-title">Icons</span>
-        </a>
-      </li> --}}
-      
     </ul>
   </nav>

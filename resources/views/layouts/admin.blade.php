@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') {{ config('app.name', 'Laravel') }}</title>
 
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('admin/vendors/mdi/css/materialdesignicons.min.css') }}">
@@ -34,7 +34,7 @@
 
         <div class="container-fluid page-body-wrapper">
             @include('layouts.inc.admin.sidebar')
-            
+
             <div class="main-panel">
                 <div class="content-wrapper">
                     @yield('content')

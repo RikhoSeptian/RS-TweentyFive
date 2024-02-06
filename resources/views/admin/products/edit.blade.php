@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    
+
 <div class="row">
     <div class="clo-md-12">
         <div class="card">
@@ -124,6 +124,12 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
+                                        <label for="">Featured</label>
+                                        <input type="checkbox" name="featured" {{ $product->featured == '1' ? 'checked':'' }} style="width: 50px;">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
                                         <label for="">Status</label>
                                         <input type="checkbox" name="status" {{ $product->status == '1' ? 'checked':'' }} style="width: 50px;">
                                     </div>
@@ -149,7 +155,7 @@
                                     <h3>No Image Add</h3>
                                 @endif
                             </div>
-                        </div>  
+                        </div>
                         <div class="tab-pane fade border p-3" id="colors-tab-pane" role="tabpanel" tabindex="0">
                             <div class="mb-3">
                                 <h4>Add Product Color</h4>
@@ -169,7 +175,7 @@
                                         <div class="col-md-12">
                                             <h1>No\ colors found</h1>
                                         </div>
-                                    @endforelse 
+                                    @endforelse
                                 </div>
                             </div>
                             <div class="table-responsive">
@@ -205,9 +211,9 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>  
+                        </div>
                     </div>
-                    
+
                     <div>
                         <button type="submit" class="btn btn-primary">Update</button>
                     </div>
@@ -234,17 +240,17 @@
             var product_id = "{{ $product->id }}";
             var prod_color_id = $(this).val();
             var qty = $(this).closest('.prod-color-tr').find('.productColorQuantity').val();
-            
+
             if (qty <= 0) {
                 alert('Quantity is required');
                 return false;
             }
-            
+
             var data = {
                 'product_id' : product_id,
                 'qty' : qty
             };
-            
+
             $.ajax({
                 type: "POST",
                 url: "/admin/product-color/"+prod_color_id,
@@ -271,5 +277,5 @@
         });
     });
 </script>
-    
+
 @endsection

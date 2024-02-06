@@ -7,7 +7,12 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    public $products, $category, $brandsList;
+    public $products, $category, $brandInputs = [], $priceInput;
+
+    protected $queryString = [
+        'brandInputs' => ['except' => '', 'as' => 'brand'],
+        'priceInput' => ['except' => '', 'as' => 'price'],
+    ];
 
     public function mount($category)
     {
@@ -16,11 +21,20 @@ class Index extends Component
 
     public function render()
     {
-        // lanjutkan yang ini di vidio yang part-23
-        // tentang filter produk
-        // di menit 9:19 
-        
-        $this->products = Product::where('category->id',$this->category->id)->where('status', '0')->get();
+        $this->products = Product::where('category_id',$this->category->id)
+            ->when($this->brandInputs, function ($q) {
+                $q->whereIn('brand', $this->brandInputs);
+            })
+            ->when($this->priceInput, function ($q) {
+                $q->when($this->priceInput == 'high-to-low', function ($q2) {
+                    $q2->orderBy('selling_price', 'DESC');
+                })
+                ->when($this->priceInput == 'low-to-high', function ($q2) {
+                    $q2->orderBy('selling_price', 'ASC');
+                });
+            })
+            ->where('status', '0')
+            ->get();
 
         return view('livewire.frontend.product.index', [
             'products' => $this->products,

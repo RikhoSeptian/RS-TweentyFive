@@ -33,9 +33,9 @@ class ProductController extends Controller
     public function store(ProductFormRequest $request)
     {
         $validateData = $request->validated();
-        
+
         $category = Category::findOrFail($validateData['category_id']);
-        
+
         $product = $category->products()->create([
             'category_id' => $validateData['category_id'],
             'name' => $validateData['name'],
@@ -47,6 +47,7 @@ class ProductController extends Controller
             'selling_price' => $validateData['selling_price'],
             'quantity' => $validateData['quantity'],
             'trending' => $request->trending == true ? '1':'0',
+            'trending' => $request->featured == true ? '1':'0',
             'status' => $request->status == true ? '1':'0',
             'meta_title' => $validateData['meta_title'],
             'meta_keyword' => $validateData['meta_keyword'],
@@ -62,11 +63,11 @@ class ProductController extends Controller
                 $extention = $imageFile->getClientOriginalExtension();
                 $filename = time().$i++.'.'.$extention;
                 $imageFile->move($uploadPath,$filename);
-                $finalImagePathName = $uploadPath.$filename;  
+                $finalImagePathName = $uploadPath.$filename;
 
                 $product->productImages()->create([
                     'product_id' => $product->id,
-                    'image' => $finalImagePathName,        
+                    'image' => $finalImagePathName,
                 ]);
             }
         }
@@ -85,7 +86,7 @@ class ProductController extends Controller
     }
 
     public function edit(int $product_id)
-    {   
+    {
         $categories = Category::all();
         $brands = Brand::all();
         $product = Product::findOrFail($product_id);
@@ -102,7 +103,7 @@ class ProductController extends Controller
 
         $product = Category::findOrFail($validateData['category_id'])->products()->where('id', $product_id)->first();
 
-        if ($product) 
+        if ($product)
         {
             $product->update([
                 'category_id' => $validateData['category_id'],
@@ -115,6 +116,7 @@ class ProductController extends Controller
                 'selling_price' => $validateData['selling_price'],
                 'quantity' => $validateData['quantity'],
                 'trending' => $request->trending == true ? '1':'0',
+                'trending' => $request->featured == true ? '1':'0',
                 'status' => $request->status == true ? '1':'0',
                 'meta_title' => $validateData['meta_title'],
                 'meta_keyword' => $validateData['meta_keyword'],
@@ -123,17 +125,17 @@ class ProductController extends Controller
 
             if ($request->hasFile('image')) {
                 $uploadPath = 'uploads/products/';
-    
+
                 $i = 1;
                 foreach ($request->file('image') as $imageFile) {
                     $extention = $imageFile->getClientOriginalExtension();
                     $filename = time().$i++.'.'.$extention;
                     $imageFile->move($uploadPath,$filename);
-                    $finalImagePathName = $uploadPath.$filename;  
-    
+                    $finalImagePathName = $uploadPath.$filename;
+
                     $product->productImages()->create([
                         'product_id' => $product->id,
-                        'image' => $finalImagePathName,        
+                        'image' => $finalImagePathName,
                     ]);
                 }
             }
@@ -147,7 +149,7 @@ class ProductController extends Controller
                     ]);
                 }
             }
-    
+
             return redirect('admin/products')->with('massage', 'Product Update Successfully');
         } else {
             return redirect('admin/products')->with('massage', 'No Such Product Id Found');
@@ -155,7 +157,7 @@ class ProductController extends Controller
         }
     }
 
-    public function destroyImage(int $product_image_id) 
+    public function destroyImage(int $product_image_id)
     {
         $productImage = ProductImage::findOrFail($product_image_id);
         if (File::exists($productImage->image)) {
@@ -194,6 +196,6 @@ class ProductController extends Controller
     {
         $prodColor = ProductColor::findOrFail($prod_color_id);
         $prodColor->delete();
-        return response()->json(['message' => 'Product Color Deleted']);        
+        return response()->json(['message' => 'Product Color Deleted']);
     }
 }

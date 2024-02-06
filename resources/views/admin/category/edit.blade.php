@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    
+
 <div class="row">
     <div class="col-md-12 grid-margin">
         <div class="card">
@@ -14,7 +14,7 @@
                 <form action="{{ url('admin/category/'.$category->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    
+
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="">Name</label>
@@ -34,7 +34,7 @@
                         <div class="col-md-6 mb-3">
                             <label for="">Image</label>
                             <input type="file" name="image" class="form-control" />
-                            <img src="{{ asset('/uploads/category/'.$category->image) }}" width="60px" height="60px" alt="">
+                            <img src="{{ asset($category->image) }}" width="60px" height="60px" alt="">
                             @error('image') <small class="text-danger">{{ $message }}</small> @enderror
                         </div>
                         <div class="col-md-6 mb-3">

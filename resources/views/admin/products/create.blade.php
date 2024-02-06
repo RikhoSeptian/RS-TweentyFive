@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    
+
 <div class="row">
     <div class="clo-md-12">
         <div class="card">
@@ -117,6 +117,12 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
+                                        <label for="">Featured</label>
+                                        <input type="checkbox" name="featured" style="width: 50px;">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
                                         <label for="">Status</label>
                                         <input type="checkbox" name="status" style="width: 50px;">
                                     </div>
@@ -128,7 +134,7 @@
                                 <label for="">Update Product Images</label>
                                 <input type="file" name="image[]" multiple class="form-control" />
                             </div>
-                        </div>  
+                        </div>
                         <div class="tab-pane fade border p-3" id="color-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
                             <div class="mb-3">
                                 <label for="">Select Color</label>
@@ -147,14 +153,14 @@
                                         <div class="col-md-12">
                                             <h1>No colors found</h1>
                                         </div>
-                                    @endforelse 
-                                        
+                                    @endforelse
+
                                 </div>
 
                             </div>
-                        </div>  
+                        </div>
                     </div>
-                    
+
                     <div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>

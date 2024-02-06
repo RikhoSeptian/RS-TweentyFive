@@ -19,17 +19,17 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="">Nama Prodi</label>
+                        <label for="">Nama Color</label>
                         <input type="text" name="name" class="form-control" />
                     </div>
-                    {{-- <div class="mb-3">
+                    <div class="mb-3">
                         <label for="">Color Code</label>
                         <input type="text" name="code" class="form-control" />
                     </div>
                     <div class="mb-3">
                         <label for="">Color Status</label><br>
                         <input type="checkbox" name="status" style="width: 20px; height: 20px;" /> Checked=Hidden,UnChecked=Visible
-                    </div> --}}
+                    </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>

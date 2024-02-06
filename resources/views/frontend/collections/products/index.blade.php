@@ -21,8 +21,8 @@
             </div>
 
             <livewire:frontend.product.index :category="$category" />
-            
+
         </div>
     </div>
-</div>    
+</div>
 @endsection

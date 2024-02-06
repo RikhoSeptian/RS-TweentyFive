@@ -25,12 +25,13 @@ class Product extends Model
         'selling_price',
         'quantity',
         'trending',
+        'featured',
         'status',
         'meta_title',
         'meta_keyword',
         'meta_description',
     ];
-    
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
