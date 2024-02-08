@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <h4>Welcome to Funda of Web IT E-Commerce</h4>
+                    <h4>Welcome to RS TweentyFive of Web IT E-Commerce</h4>
                     <div class="underline mx-auto"></div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero autem placeat delectus laborum porro aperiam consequuntur, exercitationem iure soluta tempora iusto reiciendis enim quo, minima voluptatem culpa sit repellendus animi. Tempora cum nesciunt, earum aliquid magni obcaecati aut nobis id natus dolore doloribus animi cupiditate maiores corporis quas alias incidunt numquam explicabo eum? Eius, provident corporis quis soluta, reprehenderit accusantium fugit architecto, laborum quas eligendi porro laboriosam distinctio dolores ullam odit est mollitia tempora similique quae ab beatae dolorum sit blanditiis! Atque eius cum similique dolor consequuntur unde rem reprehenderit tempora mollitia. Accusantium dolores aliquam expedita optio minus quia dolorum.

@@ -6,7 +6,7 @@
     <div class="clo-md-12">
         <div class="card">
             <div class="card-header">
-                <h3>Add Product
+                <h3>Edit Product
                     <a href="{{ url('admin/products') }}" class="btn btn-primary btn-sm float-end"> BACK</a>
                 </h3>
             </div>
